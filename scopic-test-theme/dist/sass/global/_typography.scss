@@ -1,0 +1,154 @@
+/* Font Responsive Calculation */
+$font-min-width: 375; // min width needed for calculation
+$font-max-width: 1440; // max width to for calculation
+
+// Set min/max font sizes for each element
+$max-font-h1: 60;
+$min-font-h1: 40;
+
+$max-font-h2: 36;
+$min-font-h2: 30;
+
+$max-font-h3: 30;
+$min-font-h3: 30;
+
+$max-font-h4: 21;
+$min-font-h4: 18;
+
+$max-font-h5: 18;
+$min-font-h5: 18;
+
+$max-font-h6: 16;
+$min-font-h6: 16;
+
+$max-font-body: 16;
+$min-font-body: 14;
+
+$max-font-btn: 16;
+$min-font-btn: 14;
+
+// Fonts
+$fonts: (
+  sizes: (
+    h1: (
+      max: $max-font-h1,
+      min: $min-font-h1
+    ),
+    h2: (
+      max: $max-font-h2,
+      min: $min-font-h2 
+    ),
+    h3: (
+      max: $max-font-h3,
+      min: $min-font-h3 
+    ),
+    h4: (
+      max: $max-font-h4,
+      min: $min-font-h4 
+    ),
+    h5: (
+      max: $max-font-h5,
+      min: $min-font-h5 
+    ),
+    h6: (
+      max: $max-font-h6,
+      min: $min-font-h6 
+    ),
+    body: (
+      max: $max-font-body,
+      min: $min-font-body 
+    )/*,
+    '.class': (
+      max: $max-font-h2-small-banner,
+      min: $min-font-h2-small-banner
+    )*/
+  )
+);
+
+// Key Values
+@function map-fetch($map, $keys) {
+  $key: nth($keys, 1);
+  $length: length($keys);
+  $value: map-get($map, $key);
+  @if ($length > 1) {
+    $rest: ();
+    @for $i from 2 through $length {
+      $rest: append($rest, nth($keys, $i))
+    }
+    @return map-fetch($value, $rest)
+  } @else {
+    @return $value;
+  }
+}
+
+// ITERATE THROUGH SIZES AND CREATE CLASSES ACCORDINGLY
+@each $size in map-keys(map-get($fonts, sizes)) {
+  #{$size} { font-size: #{map-fetch($fonts, sizes $size min)}px; }
+  @media (min-width: #{$font-min-width}px) and (max-width: #{$font-max-width}px){
+    #{$size} { 
+      font-size: calc( #{map-fetch($fonts, sizes $size min)}px + (#{map-fetch($fonts, sizes $size max )} - #{map-fetch($fonts, sizes $size min)}) * ( (100vw - #{$font-min-width}px) / ( #{$font-max-width} - #{$font-min-width}) ));
+    }
+  }
+  @media (min-width: #{$font-max-width}px){
+      #{$size} { 
+        font-size: #{map-fetch($fonts, sizes $size max)}px;
+      }
+  }
+}
+
+
+/**** Typography ****/
+h1 {
+  color: $black;
+  font-weight: 700;
+  font-family: $inter-family;
+  margin-bottom: 0;
+}
+
+h2 {
+  color: $black;
+  font-family: $inter-family;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+h3 {
+  color: $black;
+  font-family: $inter-family;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+h4 {
+  color: $black;
+  font-family: $inter-family;
+  font-weight: 500;
+  margin-bottom: 0;
+}
+
+h5 {
+  color: $black;
+  font-family: $inter-family;
+  margin-bottom: 0;
+}
+
+h6 {
+  color: $black;
+  font-family: $inter-family;
+  margin-bottom: 0;
+}
+
+p {
+  color: $black;
+  font-family: $inter-family;
+  margin-bottom: 0;
+  a {
+    color: $black;
+    font-family: $inter-family;
+    text-decoration: underline;
+    &:hover {
+      text-decoration: none;
+      color: $black;
+    }
+  }
+}

@@ -1,0 +1,232 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@media (max-width: 575px) {
+  .col-xs-6 {
+    max-width: 50%; } }
+
+.mob-none {
+  display: block; }
+  @media (max-width: 991px) {
+    .mob-none {
+      display: none; } }
+
+.mob-block {
+  display: none; }
+  @media (max-width: 991px) {
+    .mob-block {
+      display: block; } }
+
+.section-order-1 {
+  -webkit-box-ordinal-group: 2;
+  -ms-flex-order: 1;
+  order: 1; }
+  @media (max-width: 991px) {
+    .section-order-1 {
+      -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+      order: 2; } }
+
+.section-order-2 {
+  -webkit-box-ordinal-group: 3;
+  -ms-flex-order: 2;
+  order: 2; }
+  @media (max-width: 991px) {
+    .section-order-2 {
+      -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+      order: 1; } }
+
+/*
+    thin - 100
+    extralight - 200
+    light - 300
+    regular - 400
+    medium - 500
+    semibold - 600
+    bold - 700 
+    extrabold - 800 
+    black - 900 
+*/
+/* Font Responsive Calculation */
+h1 {
+  font-size: 40px; }
+
+@media (min-width: 375px) and (max-width: 1440px) {
+  h1 {
+    font-size: calc( 40px + (60 - 40) * ( (100vw - 375px) / ( 1440 - 375) )); } }
+
+@media (min-width: 1440px) {
+  h1 {
+    font-size: 60px; } }
+
+h2 {
+  font-size: 30px; }
+
+@media (min-width: 375px) and (max-width: 1440px) {
+  h2 {
+    font-size: calc( 30px + (36 - 30) * ( (100vw - 375px) / ( 1440 - 375) )); } }
+
+@media (min-width: 1440px) {
+  h2 {
+    font-size: 36px; } }
+
+h3 {
+  font-size: 30px; }
+
+@media (min-width: 375px) and (max-width: 1440px) {
+  h3 {
+    font-size: calc( 30px + (30 - 30) * ( (100vw - 375px) / ( 1440 - 375) )); } }
+
+@media (min-width: 1440px) {
+  h3 {
+    font-size: 30px; } }
+
+h4 {
+  font-size: 18px; }
+
+@media (min-width: 375px) and (max-width: 1440px) {
+  h4 {
+    font-size: calc( 18px + (21 - 18) * ( (100vw - 375px) / ( 1440 - 375) )); } }
+
+@media (min-width: 1440px) {
+  h4 {
+    font-size: 21px; } }
+
+h5 {
+  font-size: 18px; }
+
+@media (min-width: 375px) and (max-width: 1440px) {
+  h5 {
+    font-size: calc( 18px + (18 - 18) * ( (100vw - 375px) / ( 1440 - 375) )); } }
+
+@media (min-width: 1440px) {
+  h5 {
+    font-size: 18px; } }
+
+h6 {
+  font-size: 16px; }
+
+@media (min-width: 375px) and (max-width: 1440px) {
+  h6 {
+    font-size: calc( 16px + (16 - 16) * ( (100vw - 375px) / ( 1440 - 375) )); } }
+
+@media (min-width: 1440px) {
+  h6 {
+    font-size: 16px; } }
+
+body {
+  font-size: 14px; }
+
+@media (min-width: 375px) and (max-width: 1440px) {
+  body {
+    font-size: calc( 14px + (16 - 14) * ( (100vw - 375px) / ( 1440 - 375) )); } }
+
+@media (min-width: 1440px) {
+  body {
+    font-size: 16px; } }
+
+/**** Typography ****/
+h1 {
+  color: #000000;
+  font-weight: 700;
+  font-family: "Inter", sans-serif;
+  margin-bottom: 0; }
+
+h2 {
+  color: #000000;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  margin-bottom: 0; }
+
+h3 {
+  color: #000000;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  margin-bottom: 0; }
+
+h4 {
+  color: #000000;
+  font-family: "Inter", sans-serif;
+  font-weight: 500;
+  margin-bottom: 0; }
+
+h5 {
+  color: #000000;
+  font-family: "Inter", sans-serif;
+  margin-bottom: 0; }
+
+h6 {
+  color: #000000;
+  font-family: "Inter", sans-serif;
+  margin-bottom: 0; }
+
+p {
+  color: #000000;
+  font-family: "Inter", sans-serif;
+  margin-bottom: 0; }
+  p a {
+    color: #000000;
+    font-family: "Inter", sans-serif;
+    text-decoration: underline; }
+    p a:hover {
+      text-decoration: none;
+      color: #000000; }
+
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box; }
+
+html {
+  scroll-behavior: smooth; }
+
+.page-holder {
+  overflow: hidden; }
+
+strong {
+  font-family: "Inter", sans-serif;
+  font-weight: 700; }
+
+/**** Home ****/
+#wrapp .title {
+  text-align: center;
+  min-height: 50vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center; }
+  #wrapp .title h1 {
+    text-transform: capitalize;
+    letter-spacing: 14px;
+    cursor: default;
+    -webkit-transition: all 0.4s ease-in-out;
+    -o-transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in-out;
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1); }
+    #wrapp .title h1:hover {
+      -webkit-transform: scale(1.1);
+      -ms-transform: scale(1.1);
+      transform: scale(1.1); }
+
+#wrapp .news-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: distribute;
+  justify-content: space-around;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap; }
+  #wrapp .news-list .single-news {
+    min-width: 200px;
+    text-align: center;
+    margin-bottom: 35px; }

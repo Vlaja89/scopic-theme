@@ -1,0 +1,33 @@
+.col-xs-6{ 
+    @media (max-width: 575px) {
+        max-width: 50%;
+    }
+}
+
+.mob-none {
+    display: block;
+    @media (max-width: 991px) {
+        display: none;
+    } 
+}
+
+.mob-block {
+    display: none;
+    @media (max-width: 991px) {
+        display: block;
+    } 
+}
+
+.section-order-1 {
+    order: 1;
+    @media (max-width: 991px) {
+        order: 2;
+    } 
+}
+
+.section-order-2 {
+    order: 2;
+    @media (max-width: 991px) {
+        order: 1;
+    } 
+}
